@@ -3,7 +3,7 @@ import time
 from rclpy.action import ActionServer
 from om_aiv_util.socket_taskmaster import *
 from om_aiv_util.parser import *
-from om_aiv_msg.action import Action
+from amr_msg.action import Action
 from rclpy.node import Node
 
 class LDActionServer(Node):

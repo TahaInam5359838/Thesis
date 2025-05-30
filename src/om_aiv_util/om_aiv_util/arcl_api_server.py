@@ -4,7 +4,7 @@ from rclpy.node import Node
 import sys
 import time
 from om_aiv_util.socket_driver import *
-from om_aiv_msg.srv import ArclApi
+from amr_msg.srv import ArclApi
 
 def custom_spin(arcl_service):
     """
