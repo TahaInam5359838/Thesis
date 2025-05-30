@@ -71,14 +71,14 @@ def generate_launch_description():
     
     # RViz goto point node
     goto_point_node = Node(
-        package='om_aiv_navigation',
+        package='amr_navigation',
         executable='goto_point',
         output='screen',
     )
     
     # RViz goto point node
     localize_at_point_node = Node(
-        package='om_aiv_navigation',
+        package='amr_navigation',
         executable='localize_at_point',
         output='screen',
     )

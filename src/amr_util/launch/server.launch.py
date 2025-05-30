@@ -51,9 +51,9 @@ def generate_launch_description():
     # The LD's Network Settings for ARCL setup
     # Can be changed in SetNetGo - Network - User LAN Ethernet
     # This node is to control the AMR via ARCL commands
-    # ros2 run om_aiv_navigation action_server --ros-args -p ip_address:=192.168.2.2 -p port:=7171 -p def_arcl_passwd:=omron
+    # ros2 run amr_navigation action_server --ros-args -p ip_address:=192.168.2.2 -p port:=7171 -p def_arcl_passwd:=omron
     action_serve = Node(
-        package='om_aiv_navigation',
+        package='amr_navigation',
         executable='action_server',
         #name = 'action_server',
         output='screen',
