@@ -1,0 +1,10 @@
+# Can use a YAML file if desired
+
+AMR_IP_WIRELESS = "192.168.2.2"
+AMR_IP_WIRED = "192.168.1.1"
+
+TM_IP = "192.168.1.2"
+
+SERVER_IP = "192.168.2.50"
+
+CLIENT_IP = "192.168.2.100"
