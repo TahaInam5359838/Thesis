@@ -16,6 +16,8 @@ The system consists of the following core components
 
 This repository is intended to be used on a machine installed with ROS2 Humble and MoveIt. The respective installation pages can be referenced.
 
+Need to add thorough information about installation since I changed some source packages
+
 ## Network Topology
 
 Outline the ip addresses and subnets
@@ -23,13 +25,18 @@ Outline the ip addresses and subnets
 reference the config package section. The ip addresses must be set in the config package...
 
 ## System Overview
+The control of the TM12-S and AMR250 using ROS2 is achieved in a very similar way. Each robot uses its own command language for control, the TM Expression Editor for the TM12-S, and the [Advanced Robotics Command Language (ARCL)](#advanced-robotics-command-language-arcl) for the AMR250. These are exploited by ROS2 "interface" nodes that monitor published messages/services/actions that build and send command strings to the respective robots, and vice versa for feedback. ROS2 "control" nodes then use RViz2 windows to visually monitor and manipulate the robots based on the state of the various ROS2 interfaces.
+
+Using a 
+
+
 
 Describe how we have the interface package, and then the visualisation/control package.
 
 Describe how the system can be used. (with one computer, with two, wireless/wired etc)
 
 ## Packages Overview
-Many packages in this repository are based on source filed obtained from [Omron APAC Github Repo]{https://github.com/OmronAPAC/Omron_AMR_ROS2} and [Techman Robotic Inc Github Repo]{https://github.com/TechmanRobotInc/tmr_ros2}. Some changes have been made to suit the specific use in the UNSW MoMa system.
+Many packages in this repository are based on source filed obtained from [Omron APAC Github Repo](https://github.com/OmronAPAC/Omron_AMR_ROS2) and [Techman Robotic Inc Github Repo](https://github.com/TechmanRobotInc/tmr_ros2). Some changes have been made to suit the specific use in the UNSW MoMa system.
 
 Contributions and discussions from Wiechen Tie, David Nie and Wong Chung Fong accelerated significant progress in building aspects in this repository. Big thanks!
 
