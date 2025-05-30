@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import setup
 
-package_name = 'om_aiv_util'
+package_name = 'amr_util'
 
 setup(
     name=package_name,
@@ -24,8 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'arcl_api_server = om_aiv_util.arcl_api_server:main',
-            'ld_states_publisher = om_aiv_util.ld_states_publisher:main',
+            'arcl_api_server = amr_util.arcl_api_server:main',
+            'ld_states_publisher = amr_util.ld_states_publisher:main',
         ],
     },
 )

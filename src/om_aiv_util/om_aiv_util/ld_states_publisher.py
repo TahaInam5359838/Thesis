@@ -3,7 +3,7 @@ import rclpy
 import sys
 import time
 from std_msgs.msg import String
-from om_aiv_util.socket_listener import *
+from amr_util.socket_listener import *
 from amr_msg.msg import Status, Location
 from rclpy.node import Node
 

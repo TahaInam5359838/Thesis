@@ -12,13 +12,13 @@ import ip_settings
 
 
 def generate_launch_description():
-    om_aiv_util_launch = os.path.join(get_package_share_directory('om_aiv_util'), 'launch', 'server.launch.py')
+    amr_util_launch = os.path.join(get_package_share_directory('amr_util'), 'launch', 'server.launch.py')
     amr_visualisation_launch = os.path.join(get_package_share_directory('amr_visualisation'), 'launch', 'display.launch.py')
     tm12s_moveit_launch = os.path.join(get_package_share_directory('tm12s_moveit_config'), 'launch', 'tm12s_run_move_group.launch.py')
 
     return LaunchDescription([
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(om_aiv_util_launch)
+            PythonLaunchDescriptionSource(amr_util_launch)
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(amr_visualisation_launch)

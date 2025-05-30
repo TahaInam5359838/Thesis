@@ -1,8 +1,8 @@
 import rclpy
 import time
 from rclpy.action import ActionServer
-from om_aiv_util.socket_taskmaster import *
-from om_aiv_util.parser import *
+from amr_util.socket_taskmaster import *
+from amr_util.parser import *
 from amr_msg.action import Action
 from rclpy.node import Node
 

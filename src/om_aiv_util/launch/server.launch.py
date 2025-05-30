@@ -6,9 +6,9 @@ from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 import os
 
-#parameters_file_path = os.path.join(get_package_share_directory('om_aiv_util'), 'config', 'main_param.yaml')
+#parameters_file_path = os.path.join(get_package_share_directory('amr_util'), 'config', 'main_param.yaml')
 
-# ros2 launch om_aiv_util server.launch.py
+# ros2 launch amr_util server.launch.py
 
 def generate_launch_description():
 
@@ -18,9 +18,9 @@ def generate_launch_description():
 	# Default is 192.168.2.2, 7171
 	# Password is set under Mobile Planner - Configuration - Robot Interface - ARCL Server Setup - Password
 	# This node is to connect to the AMR
-	# ros2 run om_aiv_util arcl_api_server --ros-args -p ip_address:=192.168.2.2 -p port:=7171 -p def_arcl_passwd:=omron
+	# ros2 run amr_util arcl_api_server --ros-args -p ip_address:=192.168.2.2 -p port:=7171 -p def_arcl_passwd:=omron
     arcl_api = Node(
-        package='om_aiv_util',
+        package='amr_util',
         executable='arcl_api_server',
         #name='arcl_api_server',
         output='log',
@@ -36,9 +36,9 @@ def generate_launch_description():
     # Static IP for Leo's wireless adapter on the lab computer is set as 192.168.2.50
     # Testing if 192.168.2.51 is more stable for laptop IP. Since its different to pc
     # This node is to retrieve info from the AMR via ARCL commands
-    # ros2 run om_aiv_util ld_states_publisher --ros-args -p local_ip:=192.168.2.50 -p local_port:=7179
+    # ros2 run amr_util ld_states_publisher --ros-args -p local_ip:=192.168.2.50 -p local_port:=7179
     ld_states = Node(
-        package='om_aiv_util',
+        package='amr_util',
         executable='ld_states_publisher',
         #name='ld_states_publi',
         output='screen',
